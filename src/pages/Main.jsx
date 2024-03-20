@@ -67,7 +67,7 @@ const Main = () => {
 						</p>
 						<div className="row text-center justify-content-center mt-5">
 							<div className="col col sm-12 col-md-6 col-lg-4">
-								<i className="fas fa-globe-americas fa-2x" />
+								{/* <i className="fas fa-globe-americas fa-2x" /> */}
 								<h4>Visual Entertainment</h4>
 								<img
 									className="product_img"
@@ -76,7 +76,7 @@ const Main = () => {
 								/>
 							</div>
 							<div className="col col sm-12 col-md-6 col-lg-4">
-								<i className="fas fa-headset fa-2x" />
+								{/* <i className="fas fa-headset fa-2x" /> */}
 
 								<h4>Portable Tech</h4>
 								<img
@@ -86,7 +86,7 @@ const Main = () => {
 								/>
 							</div>
 							<div className="col sm-12 col-md-6 col-lg-4">
-								<i className="fas fa-book-open fa-2x" />
+								{/* <i className="fas fa-book-open fa-2x" /> */}
 
 								<h4>Tech for Productivity</h4>
 								<img
