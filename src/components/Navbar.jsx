@@ -1,13 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-// import logo from "../assets/";
 
 const Navbar = () => {
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg bg-body-tertiary">
 				<div className="container-fluid">
-					{/* <img src={logo} alt="" className="logo" /> */}
+					<span className="navbar-brand text-black">e-Shop</span>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -17,7 +16,7 @@ const Navbar = () => {
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<span className="navbar-toggler-icon" />
+						<span className="navbar-toggler-icon"></span>
 					</button>
 					<div
 						className="collapse navbar-collapse"
