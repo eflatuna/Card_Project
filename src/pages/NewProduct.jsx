@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import ProductForm from "../components/ProductForm";
 
 const NewProduct = () => {
+	const initialValue = {
+		name: "",
+		price: 0,
+		amount: 0,
+		image: "",
+	};
+	const [formData, setFormData] = useState(initialValue);
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		await axios.post(
+			"https://65f02ffada8c6584131b0e65.mockapi.io/api/Checkout",
+			formData
+		);
+		setFormData(initialValue);
+	};
 	return (
 		<div className="container">
 			<article
@@ -9,7 +27,7 @@ const NewProduct = () => {
 			>
 				<h1 className="text-center"> New Product</h1>
 
-				<form className="p-2">
+				{/* <form onSubmit={handleSubmit} className="p-2">
 					<div className="mb-3">
 						<label htmlFor="add-name" className="form-label">
 							Product Name
@@ -18,8 +36,14 @@ const NewProduct = () => {
 							type="text"
 							className="form-control"
 							name="name"
-							value={""}
+							value={formData.name}
 							required
+							onChange={(e) =>
+								setFormData({
+									...formData,
+									name: e.target.value,
+								})
+							}
 						/>
 					</div>
 					<div className="mb-3">
@@ -30,8 +54,14 @@ const NewProduct = () => {
 							type="number"
 							className="form-control"
 							name="price"
-							value={""}
+							value={formData.price}
 							required
+							onChange={(e) =>
+								setFormData({
+									...formData,
+									price: e.target.value,
+								})
+							}
 						/>
 					</div>
 					<div className="mb-3">
@@ -42,8 +72,14 @@ const NewProduct = () => {
 							type="number"
 							className="form-control"
 							name="amount"
-							value={""}
+							value={formData.amount}
 							required
+							onChange={(e) =>
+								setFormData({
+									...formData,
+									amount: e.target.value,
+								})
+							}
 						/>
 					</div>
 					<label htmlFor="add-image" className="form-label">
@@ -57,9 +93,15 @@ const NewProduct = () => {
 							type="url"
 							className="form-control"
 							name="image"
-							value={""}
+							value={formData.image}
 							aria-describedby="basic-addon3"
 							required
+							onChange={(e) =>
+								setFormData({
+									...formData,
+									image: e.target.value,
+								})
+							}
 						/>
 					</div>
 					<div className="text-center">
@@ -71,7 +113,12 @@ const NewProduct = () => {
 							To Product
 						</button>
 					</div>
-				</form>
+				</form> */}
+				<ProductForm
+					handleSubmit={handleSubmit}
+					formData={formData}
+					setFormData={setFormData}
+				/>
 			</article>
 		</div>
 	);

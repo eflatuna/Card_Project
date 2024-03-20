@@ -4,8 +4,10 @@ import image2 from "../assets/photo_2024-03-19_16-10-33.jpg";
 import image3 from "../assets/photo_2024-03-19_16-10-50.jpg";
 import image4 from "../assets/photo_2024-03-19_16-11-00.jpg";
 import image5 from "../assets/photo_2024-03-19_16-13-11.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
+	const navigate = useNavigate();
 	return (
 		<div>
 			<>
@@ -31,10 +33,16 @@ const Main = () => {
 									enhance every aspect of your life.
 								</p>
 								<div className="buttons">
-									<button className="btn btn-primary m-1">
+									<button
+										className="btn btn-primary m-1"
+										onClick={() => navigate("/products")}
+									>
 										Shop Now
 									</button>
-									<button className="btn btn-primary m-1">
+									<button
+										className="btn btn-primary m-1"
+										onClick={() => navigate("/new-product")}
+									>
 										Add New Product
 									</button>
 								</div>

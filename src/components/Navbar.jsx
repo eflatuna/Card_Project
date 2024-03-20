@@ -6,7 +6,9 @@ const Navbar = () => {
 		<div>
 			<nav className="navbar navbar-expand-lg bg-body-tertiary">
 				<div className="container-fluid">
-					<span className="navbar-brand text-black">e-Shop</span>
+					<span className="navbar-brand text-black h2">
+						GADGET GROOVE
+					</span>
 					<button
 						className="navbar-toggler"
 						type="button"

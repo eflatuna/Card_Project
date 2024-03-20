@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product, getData }) => {
+	const navigate = useNavigate();
 	const { id, image, name, price, amount } = product;
 	const BASE_URL = "https://65f02ffada8c6584131b0e65.mockapi.io/api/Checkout";
 
@@ -43,7 +45,15 @@ const ProductCard = ({ product, getData }) => {
 				</div>
 				<div className="col-md-7">
 					<div className="card-body">
-						<h5 className="card-title" role="button">
+						<h5
+							className="card-title"
+							role="button"
+							onClick={() =>
+								navigate("/update-product", {
+									state: { product },
+								})
+							}
+						>
 							{name}
 						</h5>
 						<div className="product-price d-flex flex-wrap align-items-center">

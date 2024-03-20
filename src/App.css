@@ -30,8 +30,8 @@ img {
 	max-width: 100%;
 	object-fit: cover;
 	width: 100%;
-	aspect-ratio: 2/1;
-	object-position: center;
+	/* aspect-ratio: 2/1; */
+	/* object-position: left center; */
 }
 .product_img {
 	object-fit: cover;
@@ -74,7 +74,8 @@ main h4 {
 	top: 0;
 	width: 4px;
 	height: 100%;
-	background-color: #f1f2b5;
+
+	background-color: black;
 	transform: scaleY(1);
 	transition: all 0.5s;
 	transform-origin: bottom;
@@ -87,7 +88,7 @@ main h4 {
 	top: 0;
 	width: 4px;
 	height: 100%;
-	background-color: #135058;
+	background-color: #1b2dcc;
 	transform: scaleY(0);
 	transition: all 0.5s;
 	transform-origin: bottom;
